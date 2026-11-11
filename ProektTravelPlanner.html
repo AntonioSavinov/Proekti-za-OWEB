@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Travel Planner Makedonija</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="ProektCSS.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#pocetna">Ultra Travel Planner Makedonija</a>
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link" href="#destinacii">Дестинации</a>
+            <a class="nav-link" href="#galerija">Галерија</a>
+            <a class="nav-link" href="#blog">Водич</a>
+            <a class="nav-link" href="#anketa">Анкета</a>
+        </div>
+    </nav>
+    <div id="pocetna" class="hero text-center py-5">
+        <h1>Ultra Travel Planner</h1>
+        <p class="lead">Најди ги најдобрите дестинации за твоето патување во Македонија</p>
+    </div>
+    <div class="container">
+        <div id="najavaKutija" class="najava-kutija tema-sino mt-4">
+            <form id="formaNajava" class="form-inline">
+                <input type="text" id="korisnik" class="form-control mr-2" placeholder="Username" required>
+                <input type="password" id="lozinka" class="form-control mr-2" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary">Log in</button>
+                <span id="greskaNajava" class="text-danger ml-3"></span>
+            </form>
+            <div id="najavenPanel" class="d-none">
+                <span id="najavaInfo" class="najava-naslov mr-3"></span>
+                <button id="btnOdjava" class="btn btn-primary btn-sm">Log out</button>
+            </div>
+        </div>
+        <section id="destinacii" class="tema-sino">
+            <h2 class="mt-4">Дестинации</h2>
+            <form id="formaDestinacija" class="form-inline mb-3 d-none">
+                <input type="text" id="imeGrad" class="form-control mr-2" placeholder="Град" required>
+                <input type="number" id="prevoz" class="form-control mr-2" placeholder="Превоз (€)" required>
+                <input type="number" id="dnevno" class="form-control mr-2" placeholder="Дневно (€)" required>
+                <select id="kategorija" class="form-control mr-2">      
+                </select>
+                <button type="submit" class="btn btn-success">Додади</button>
+            </form>
+            <p id="porakaNajava" class="text-muted">Log in за да додадете и избришете дестинации.</p>
+            <div class="filter-bar mb-3">
+                <span class="filter-naslov">Филтер</span>
+                <div class="filter-polinja">
+                    <select id="filterKategorija" class="form-control filter-input">
+                        <option value="site">Сите категории</option>
+                        
+                    </select>
+                    <select id="filterDestinacija" class="form-control filter-input"></select>
+                    <input type="number" id="maxBudget" class="form-control filter-input" placeholder="Макс. дневен буџет (€)">
+                </div>
+            </div>
+            <div id="listaDestinacii" class="row"></div>
+            <div class="card card-body bg-light mt-3">
+                <h5>Калкулатор за патни трошоци</h5>
+                <div class="form-inline mb-2">
+                    <select id="kalkGrad" class="form-control mr-2"></select>
+                    <input type="number" id="kalkDenovi" class="form-control mr-2" value="3" min="1" style="width:90px">
+                    <label class="mr-2">денови,</label>
+                    <input type="number" id="kalkLugje" class="form-control mr-2" value="2" min="1" style="width:90px">
+                    <label class="mr-2">луѓе</label>
+                    <button id="btnPresmetaj" class="btn btn-primary">Пресметај</button>
+                </div>
+                <div id="kalkRezultat"></div>
+            </div>
+        </section>
+        <section id="galerija">
+            <h2 class="mt-5">Галерија <span id="galerijaGrad"></span></h2>
+            <p class="text-muted text-center">Кликни „Галерија“ на некој град за да ги видиш неговите слики.</p>
+            <div id="listaGalerija" class="row"></div>
+        </section>
+        <section id="blog">
+            <h2 class="mt-5">Водич</h2>
+            <div class="vodic-panel mb-4">
+                <h4 class="vodic-naslov">5 најпопуларни места во Македонија</h4>
+                <ol class="vodic-lista">
+                    <li><span class="vodic-ime">Охридско Езеро</span>
+                        <span class="vodic-opis">Едно од најстарите езера во Европа, заедно со градот Охрид под заштита на УНЕСКО.</span></li>
+                    <li><span class="vodic-ime">Кањон Матка</span>
+                        <span class="vodic-opis">Кањон надвор од Скопје со езеро, пештери и манастирот Св. Андреј, погоден за чамец и кајак.</span></li>
+                    <li><span class="vodic-ime">Стара скопска чаршија</span>
+                        <span class="vodic-opis">Османлиска чаршија во центарот на Скопје, до Камениот мост и Македонскиот плоштад.</span></li>
+                    <li><span class="vodic-ime">Национален парк Пелистер</span>
+                        <span class="vodic-opis">Планина над Битола со Пелистерските очи, глацијални езера, и ретката молика.</span></li>
+                    <li><span class="vodic-ime">Дојранско Езеро</span>
+                        <span class="vodic-opis">Топло езеро на југоисток од земјата, познато по плажите, риболовот и мирните залези.</span></li>
+                </ol>
+            </div>
+            <div class="vodic-sovet mb-3">
+                <h5>Интересни факти за Македонски Брод</h5>
+                <ul class="mb-0">
+                    <li>Градот се наоѓа на реката Треска, во западниот дел на Македонија.</li>
+                    <li>Името потекнува од зборот „брод“, место каде што се преминува река.</li>
+                    <li>Во близина е езерото Козјак, вештачко езеро на Треска, познато по кањонскиот предел.</li>
+                    <li>Околината е ридско-планинска и погодна за риболов, планинарење и мирен одмор.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="anketa">
+            <h2 class="mt-5">Анкета</h2>
+            <form id="formaAnketa" class="anketa-forma mb-4">
+                <div class="anketa-header">Кажи ни што мислиш за Ultra Travel Planner Makedonija</div>
+                <div class="anketa-telo">
+                    <div class="form-row">
+                        <div class="form-group col-md-6"><label>Име:</label>
+                            <input type="text" id="anketaIme" class="form-control" required></div>
+                        <div class="form-group col-md-6"><label>Email (optional):</label>
+                            <input type="email" id="anketaEmail" class="form-control"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6"><label>Возраст:</label>
+                            <select id="anketaVozrast" class="form-control">
+                                <option>Под 18</option><option selected>18–25</option><option>26–40</option>
+                                <option>41–60</option><option>Над 60</option>
+                            </select></div>
+                        <div class="form-group col-md-6"><label>Омилена дестинација:</label>
+                            <select id="anketaDestinacija" class="form-control"></select></div>
+                    </div>
+                    <div class="form-group"><label>Оцена на сајтот: <b id="ocenaBroj">10</b>/10</label>
+                        <input type="range" id="anketaOcena" class="custom-range" min="1" max="10" value="10"></div>
+                    <div class="form-group"><label>Колку често патуваш?</label><br>
+                        <label class="mr-3"><input type="radio" name="chestota" value="Ретко (1–2 пати годишно)" checked> Ретко (1–2 пати годишно)</label>
+                        <label class="mr-3"><input type="radio" name="chestota" value="Често (3–5 пати годишно)"> Често (3–5 пати годишно)</label>
+                        <label><input type="radio" name="chestota" value="Многу често (6+ пати годишно)"> Многу често (6+)</label></div>
+                    <div class="form-group"><label>Како дозна за нас?</label><br>
+                        <label class="mr-3"><input type="radio" name="izvor" value="Пријател" checked> Пријател</label>
+                        <label class="mr-3"><input type="radio" name="izvor" value="Социјални мрежи"> Социјални мрежи</label>
+                        <label><input type="radio" name="izvor" value="Пребарувач"> Пребарувач</label></div>
+                    <div class="form-group"><label>Што ти се допадна?</label><br>
+                        <label class="mr-3"><input type="checkbox" name="interesi" value="дизајн"> Дизајн</label>
+                        <label class="mr-3"><input type="checkbox" name="interesi" value="галерија"> Галерија</label>
+                        <label class="mr-3"><input type="checkbox" name="interesi" value="калкулатор"> Калкулатор</label>
+                        <label class="mr-3"><input type="checkbox" name="interesi" value="филтер"> Филтер</label>
+                        <label><input type="checkbox" name="interesi" value="водич"> Водич</label></div>
+                    <div class="form-group"><label>Дали би го препорачал сајтот?</label><br>
+                        <label class="mr-3"><input type="radio" name="preporaka" value="Да" checked> Да</label>
+                        <label class="mr-3"><input type="radio" name="preporaka" value="Можеби"> Можеби</label>
+                        <label><input type="radio" name="preporaka" value="Не"> Не</label></div>
+                    <div class="form-group"><label>Коментар или предлог:</label>
+                        <textarea id="anketaKomentar" class="form-control" rows="3"></textarea></div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" id="anketaNewsletter" class="form-check-input">
+                        <label for="anketaNewsletter" class="form-check-label">Сакам да добивам патни совети по email</label></div>
+                    <button type="submit" class="btn btn-anketa">Испрати</button>
+                </div>
+            </form>
+            <div id="rezultatAnketa"></div>
+        </section>
+    </div>
+    <footer class="bg-dark text-light text-center p-4 mt-5">
+        <p class="mb-0">Ultra Travel Planner Makedonija &copy; 2026</p>
+    </footer>
+    <script src="ProektJS.js"></script>
+</body>
+</html>
