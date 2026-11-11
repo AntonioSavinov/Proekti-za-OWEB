@@ -1,0 +1,211 @@
+:root {
+  --red: #c41e1e;
+  --red-dark: #7a1010;
+  --yellow: #f8d52a;
+  --yellow-soft: #fff3b0;
+  --cream: #fffaf0;
+  --ink: #2b1111;
+  --accent: var(--red);
+  --accent-dark: var(--red-dark);
+  --soft: var(--yellow-soft);
+}
+.tema-sino {
+  --accent: #1b4fa0;
+  --accent-dark: #0d2f6b;
+  --soft: #e4eefc;
+}
+#anketa {
+  --accent: #2f8f46;
+  --accent-dark: #b85a00;
+  --soft: #fff1de;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 70px;
+}
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+h1, h2, h3, h4, h5 {
+  font-weight: 800;
+}
+h2 {
+  display: table;
+  margin: 0 auto;
+  color: var(--accent-dark);
+  border-bottom: 4px solid var(--yellow);
+}
+.bg-light {
+  background-color: var(--soft) !important;
+}
+.text-danger {
+  color: var(--red) !important;
+}
+.badge-info {
+  background-color: var(--yellow);
+  color: var(--ink);
+}
+.alert-info {
+  background-color: var(--soft);
+  border-color: var(--accent);
+  color: var(--ink);
+}
+.alert-warning {
+  background-color: var(--yellow-soft);
+  border-color: var(--yellow);
+  color: var(--ink);
+}
+.navbar.bg-dark, footer.bg-dark {
+  background-color: var(--red-dark) !important;
+}
+.navbar-brand {
+  color: var(--yellow) !important;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--yellow);
+}
+.hero {
+  color: #fff;
+  background: linear-gradient(160deg, var(--red-dark), var(--red));
+}
+.hero .lead {
+  color: var(--yellow-soft);
+}
+.card {
+  border: 1px solid #ddd;
+  border-top: 4px solid var(--accent);
+}
+.card-title {
+  color: var(--accent-dark);
+}
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+.btn-primary:hover {
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+.btn-success {
+  background-color: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--ink);
+}
+.btn-success:hover {
+  background-color: #e6bf10;
+  border-color: #e6bf10;
+  color: var(--ink);
+}
+.btn-danger {
+  background-color: var(--red-dark);
+  border-color: var(--red-dark);
+}
+.tema-sino .btn-danger {
+  background-color: #fff;
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: none;
+}
+.najava-kutija, .filter-bar {
+  background: var(--soft);
+  border-left: 8px solid var(--yellow);
+  border-radius: .5rem;
+  padding: .9rem 1.25rem;
+}
+.najava-naslov, .filter-naslov {
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem 1.25rem;
+}
+.filter-polinja {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  flex: 1;
+}
+.filter-input {
+  width: auto;
+  min-width: 200px;
+  flex: 1 1 200px;
+}
+.vodic-panel {
+  background: var(--yellow-soft);
+  border-left: 8px solid var(--red);
+  border-radius: .5rem;
+  padding: 1.5rem;
+}
+.vodic-lista li {
+  margin-bottom: .6rem;
+}
+.vodic-ime {
+  display: block;
+  font-weight: 700;
+  color: var(--red-dark);
+}
+.vodic-sovet {
+  border: 2px dashed var(--red);
+  border-radius: .5rem;
+  padding: 1rem 1.25rem;
+}
+.galerija-glasovi {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: .75rem;
+}
+.btn-komentar {
+  background-color: var(--red);
+  color: #fff;
+}
+.komentar-balon {
+  background: var(--yellow-soft);
+  border-left: 4px solid var(--red);
+  padding: .3rem .6rem;
+  margin-top: .35rem;
+  font-size: .85rem;
+  word-break: break-word;
+}
+.anketa-forma {
+  border: 2px solid var(--accent);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+.anketa-header {
+  background: #f28c1b;
+  color: #3a1d00;
+  font-weight: 800;
+  padding: 1rem 1.5rem;
+}
+.anketa-telo {
+  padding: 1.5rem;
+  background: var(--soft);
+}
+.btn-anketa {
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  padding: .5rem 2rem;
+}
+.anketa-rezultat {
+  background: #e3f4e6;
+  border-left: 8px solid #f28c1b;
+  border-radius: .5rem;
+  padding: 1rem 1.25rem;
+}
